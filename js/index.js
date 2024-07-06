@@ -1,6 +1,8 @@
 // Importing utility functions for preloading images, getting mouse position, and linear interpolation
 import { preloadImages, getMousePos, lerp } from './utils.js';
+import { Item } from './item.js';
 
+[...document.querySelectorAll('.grid2__item > .grid2__item-img')].forEach(img => new Item(img));
 // Registers the Flip plugin with GSAP
 gsap.registerPlugin(Flip);
 
