@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Work+Sans:ital,wght@1,500&display=swap');
+
 *,
 *::after,
 *::before {
@@ -19,8 +21,10 @@ body {
 	margin: 0;
 	color: var(--color-text);
 	background-color: var(--color-bg);
-	font-family: new-science-mono, sans-serif;
-	text-transform: uppercase;
+	font-family: "Work Sans",new-science-mono, sans-serif;
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -68,40 +72,6 @@ body {
 	}
 }
 
-a {
-	text-decoration: none;
-	color: var(--color-link);
-	outline: none;
-	cursor: pointer;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: var(--color-link-hover);
-	outline: none;
-}
-
-/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
-a:focus {
-	/* Provide a fallback style for browsers
-	 that don't support :focus-visible */
-	outline: none;
-	background: lightgrey;
-}
-
-a:focus:not(:focus-visible) {
-	/* Remove the focus indicator on mouse-focus for browsers
-	 that do support :focus-visible */
-	background: transparent;
-}
-
-a:focus-visible {
-	/* Draw a very noticeable focus style for
-	 keyboard-focus on browsers that do support
-	 :focus-visible */
-	outline: 2px solid red;
-	background: transparent;
-}
 
 .unbutton {
 	background: none;
@@ -184,8 +154,8 @@ a:focus-visible {
 	width: 100%;
 	height: 100%;
 	background: url(../img/noise.png);
-  background-size: 250px, 100%;
-  pointer-events: none;
+  	background-size: 250px, 100%;
+  	pointer-events: none;
 }
 
 .intro--open {
@@ -202,14 +172,14 @@ a:focus-visible {
 	grid-template-rows: repeat(5,1fr);
 	grid-template-columns: 100%;
 	transform: rotate(var(--angle));
-  transform-origin: center center;
+ 	transform-origin: center center;
 }
 
 .row {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(7,1fr);
-  will-change: transform, filter;
+  	will-change: transform, filter;
 }
 
 .row__item {
@@ -246,11 +216,11 @@ a:focus-visible {
 
 .enter {
 	color: var(--color-bg);
-	letter-spacing: 1.618px;
+	letter-spacing: 0.2 rem;
 	position: absolute;
 	text-transform: uppercase;
-	padding: 1.75rem 4rem;
-	font-weight: 700;
+	padding: 1.3rem 3rem;
+	font-weight: 600;
 	z-index: 100;
 	font-family: "new-science", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 	font-weight: 900;
@@ -259,7 +229,7 @@ a:focus-visible {
 	background-size: 250px, 100%;
 	transition: all 0.6s;
 	cursor: pointer;
-	border-radius: 3rem;
+	border-radius: 2rem;
 	
 }
 
@@ -270,9 +240,9 @@ a:focus-visible {
 	height: 100%;
 	top: 0;
 	left: 0;
-	box-shadow: 0px 0px 0px 7px var(--color-bg);
-	border: 1.618px solid rgba(0,0,0,0.8);
-	border-radius: 3rem;
+	box-shadow: 0px 0px 1px 5px var(--color-bg);
+	
+	border-radius: 1.6rem;
 	transition: all 0.3s;
 	z-index: -1;
 
@@ -297,15 +267,136 @@ a:focus-visible {
 	border-radius: 0px;
 }
 
+
+a {
+	text-decoration: none;
+	color: var(--color-bg);
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+/**************************NAVBAR**************************/
+nav {
+	
+	border-radius: .5em;
+	background-color: #58585886;
+	display: flex;
+	width: fit-content;
+	flex-wrap: wrap;
+	padding: 0.1em;
+	margin: auto;
+	align-items: center;
+	justify-content:center;
+	position: absolute;
+	z-index: 100;
+	
+}
+
+
+nav >*{
+
+	padding: 0em 0.7em;
+	display: flex;
+	background-color: #000000e5;
+	align-items: center;
+	min-height: 3.5em;
+	margin: 0.3em ;
+	border-radius: .5em;
+
+}
+nav >*>*{
+display: flex;
+align-items: center;
+min-height: 3em;
+}
+nav >*:first-child{
+	padding: 0;
+	height: 3.5em;
+	width: 3.5em;
+	border-radius: .5em;
+}
+nav >*:last-child{
+
+	background-color: #000;
+}
+nav >*:last-child:hover{
+	background-color: #1b38b8c9;
+
+}
+.nav-list-i{
+
+    padding: 0.1em;    
+  
+}
+.nav-list-i >*{
+	text-decoration: none;
+	margin: 0.2em;
+	display: flex;
+	align-items: center;
+	justify-content:center ;
+	background-color: #4d4d4d4f;
+	border-radius: .5em;
+	width: fit-content;
+	height: fit-content;
+	min-height: 3em;
+	padding: 0.1em 0.7em;
+	border: #4d4d4d4f 0.2em solid;
+}
+.nav-list-i >*:first-child{
+	margin-left: calc(0.2em * 1.618);
+}
+.nav-list-i >*:last-child{
+	margin-right: calc(0.2em * 1.618);
+}
+.nav-list-i >*:hover{
+	border: #c9c9c9 0.2em solid;
+}
+nav img{
+	height: 100%;
+	width: 100%;
+	border-radius: .5em;
+}
+/***************************CONTENT******************************/
+
 .content {
 	padding: var(--page-padding);
 	position: relative;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .content::before {
 	content: '';
 	position: absolute;
 	border-radius: 10px 10px 0 0;
+
 	height: calc(100% + (-1) * var(--trans-content));
 	width: 100%;
 	top: 0;
@@ -317,20 +408,14 @@ a:focus-visible {
 
 .content > * {
 	position: relative;
-	letter-spacing: 0.1rem;
-}
-
-.content__nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	justify-content: space-between;
+	letter-spacing: 0.02rem;
 }
 
 .content__header h2 {
 	font-size: 2rem;
-	font-family: new-science-extended, sans-serif;
-	font-weight: 400;
+	font-family: "Fugaz One", sans-serif;
+	text-transform: uppercase;
+	font-weight: 618;
 	margin: 6rem 0 10vh;
 	line-height: 1;
 }
@@ -569,11 +654,13 @@ body #cdawrap {
 	height: 100%;
 	width: 100%;
 	font-family: "input-mono", monospace;
-	font-size: 0.9rem;
+	font-size: 0.92rem;
+	font-weight: 100;
+	font-style: normal;
 	word-wrap: break-word;
 	line-height: 1.15;
 	color: white;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.15rem;
 	opacity: 0;
 	-webkit-mask-image: radial-gradient(300px circle at var(--x) var(--y),black 20%,rgba(0,0,0,0.25),transparent);
 	mask-image: radial-gradient(300px circle at var(--x) var(--y),black 20%,rgba(0,0,0,0.25),transparent);
@@ -647,16 +734,16 @@ body #cdawrap {
 	height: calc(var(--height)*10);
 	cursor:pointer;
 	display:block;
-	background: url(../img/1.png) 0 0, 
-	url(../img/2.png) var(--width) 0, 
-	url(../img/3.png) calc(var(--width)*2) 0, 
-	url(../img/4.png) calc(var(--width)*3) 0,
-	url(../img/5.png) calc(var(--width)*9) 0,
-	url(../img/6.png) calc(var(--width)*4) 0,
-	url(../img/7.png) calc(var(--width)*5) 0,
-	url(../img/8.png) calc(var(--width)*6) 0,
-	url(../img/9.png) calc(var(--width)*7) 0,
-	url(../img/10.png) calc(var(--width)*8) 0;
+	background: url(../img/wom/1.png) 0 0, 
+	url(../img/wom/2.png) var(--width) 0, 
+	url(../img/wom/3.png) calc(var(--width)*2) 0, 
+	url(../img/wom/4.png) calc(var(--width)*3) 0,
+	url(../img/wom/5.png) calc(var(--width)*9) 0,
+	url(../img/wom/6.png) calc(var(--width)*4) 0,
+	url(../img/wom/7.png) calc(var(--width)*5) 0,
+	url(../img/wom/8.png) calc(var(--width)*6) 0,
+	url(../img/wom/9.png) calc(var(--width)*7) 0,
+	url(../img/wom/10.png) calc(var(--width)*8) 0;
 
 	background-repeat: no-repeat;
 	background-size: var(--width) var(--height);
