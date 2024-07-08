@@ -347,6 +347,7 @@ nav >*:last-child{
 }
 nav >*:last-child:hover{
 	background-color: #1b38b8c9;
+	background-color: #004e99;
 
 }
 .nav-list-i{
@@ -375,7 +376,7 @@ nav >*:last-child:hover{
 	margin-right: calc(0.2em * 1.618);
 }
 .nav-list-i >*:hover{
-	border: #c9c9c9 0.2em solid;
+	border: #c9c9c9 0.2em dashed;
 }
 nav img{
 	height: 100%;
@@ -499,7 +500,7 @@ nav img{
 }
 .slider .list .item >*{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0.9em;
 	
 }
 @keyframes autoRun{
@@ -518,7 +519,7 @@ nav img{
 .list .item:hover{
     filter: grayscale(0) opacity(1) brightness(1);
 	border-radius: 10px;
-	border: dashed 0.1rem var(--color-text);
+	border: dashed 0.2em var(--color-text);
 }
 .slider[reverse="true"] .item{
     animation: reversePlay var(--time) linear infinite;
