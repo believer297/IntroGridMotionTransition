@@ -262,7 +262,11 @@
                 transform: scale3d(1, 1, 1);
     }
 }
-
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
 @keyframes tada
 {
     from
@@ -300,7 +304,9 @@
         -webkit-transform: scale3d(1, 1, 1);
                 transform: scale3d(1, 1, 1);
     }
+    
 }
+
 .bx-spin
 {
     -webkit-animation: spin 19s linear infinite;

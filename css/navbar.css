@@ -1,0 +1,133 @@
+/**************************NAVBAR**************************/
+
+/* Navigation Bar */
+nav {
+	font-family: 'Work Sans',sans-serif;
+	font-size: var(--size-s);
+	position: fixed;
+
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 0.6rem;
+    display: flex;
+	width: calc(100% - var(--page-padding));
+    margin: 0 auto;
+    padding: 0.01em 0.5em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: transparent;
+
+}
+
+/* Navigation Items */
+nav > * {
+	--min-height:1.6rem;
+    padding: 0 0.7em;
+    display: flex;
+	background-color: transparent;
+    align-items: center;
+    min-height: var(--min-height);
+
+    border-radius: 0.5em;
+	font-style: normal;
+	letter-spacing: 0.05em;
+
+}
+
+nav > * > * {
+    display: flex;
+    align-items: center;
+    min-height: var(--min-height);
+}
+
+/* First and Last Navigation Items */
+nav > *:first-child {
+    padding: 0.7em;
+    height: var(--min-height);
+    width: calc(var(--min-height)*2.3);
+    border-radius: 0.5em;
+    overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--secondary-color);
+}
+
+nav > *:last-child {
+    background-color: var(--secondary-color);
+	padding: 0.1em 1.4em;
+    height: var(--min-height);
+}
+
+nav > *:last-child:hover {
+    
+    filter: invert(1);
+	
+}
+
+/* Navigation List Items */
+.nav-list-i {
+    padding: 0.15em 0.2em;
+	justify-content: space-evenly;
+	align-items: center;
+    margin: 0 0.5em;
+	
+}
+
+.nav-list-i > * {
+    text-decoration: none;
+    margin: 0.29em 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+	background-color: var(--primary-color);
+    color:var(--tertiary-color);
+    border-radius: 0.5em;   
+    width: fit-content;
+    height: fit-content;
+    max-height: var(--min-height);
+    padding: 0.1em 1em;
+    border: var(--tertiary-color) 0.15em solid;
+}
+
+.nav-list-i > *:hover {
+    border: var(--primary-color) 0.15em solid;
+    color: var(--primary-color);
+	background-color: var(--tertiary-color);
+}
+details{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+details ul {
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    width: max-content;
+    background-color: var(--primary-color);
+    border-radius: 0.5em;
+    padding: 0;
+
+}
+details ul li{
+    padding: 0.7em;
+    cursor: pointer;
+}
+details ul li:hover{
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-radius: 0.5em;
+}
+details summary{
+    list-style: none;
+}
+
+/* Navigation logo */
+nav img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5em;
+}

@@ -1,0 +1,80 @@
+/*------------------------multiple image hover changer--------------------------*/
+.outer {
+	display:block;
+	--width: 8rem;
+	--height: 8rem;
+	width: var(--width);
+	height: var(--height);
+	margin: 20px auto;
+	box-shadow: 0 0 20px var(--color-text);
+	overflow:hidden;
+   position:relative;
+   border-radius: 10px;
+
+  }
+  
+  .inner{
+	width: calc(var(--width)*10);
+	height: calc(var(--height)*10);
+	cursor:pointer;
+	display:block;
+	background: url(../img/wom/1.png) 0 0, 
+	url(../img/wom/2.png) var(--width) 0, 
+	url(../img/wom/3.png) calc(var(--width)*2) 0, 
+	url(../img/wom/4.png) calc(var(--width)*3) 0,
+	url(../img/wom/5.png) calc(var(--width)*9) 0,
+	url(../img/wom/6.png) calc(var(--width)*4) 0,
+	url(../img/wom/7.png) calc(var(--width)*5) 0,
+	url(../img/wom/8.png) calc(var(--width)*6) 0,
+	url(../img/wom/9.png) calc(var(--width)*7) 0,
+	url(../img/wom/10.png) calc(var(--width)*8) 0;
+
+	background-repeat: no-repeat;
+	background-size: var(--width) var(--height);
+  }
+  .outer:hover .inner,.outer:focus .inner{
+  animation:swap 618ms linear infinite;  
+  }
+  .outer:focus{
+	border:3px dashed var(--color-text);
+  }
+  @keyframes swap{
+	0%{transform:translateX(calc(var(--width)* -1))}
+	9.999%{transform:translateX(calc(var(--width)*-1))}
+	10%{transform:translateX(calc((var(--width)*2)* -1))}
+	19.999%{transform:translateX(calc((var(--width)*2)* -1))}
+	20%{transform:translateX(calc((var(--width)*3)* -1))}
+	29.999%{transform:translateX(calc((var(--width)*3)* -1))}
+	30%{transform:translateX(calc((var(--width)*4)* -1))}
+	39.999%{transform:translateX(calc((var(--width)*4)* -1))}
+	40%{transform:translateX(calc((var(--width)*5)* -1))}
+	49.999%{transform:translateX(calc((var(--width)*5)* -1))}
+	50%{transform:translateX(calc((var(--width)*6)* -1))}
+	59.999%{transform:translateX(calc((var(--width)*6)* -1))}
+	60%{transform:translateX(calc((var(--width)*7)* -1))}
+	69.999%{transform:translateX(calc((var(--width)*7)* -1))}
+	70%{transform:translateX(calc((var(--width)*8)* -1))}
+	79.999%{transform:translateX(calc((var(--width)*8)* -1))}
+	80%{transform:translateX(calc((var(--width)*9)* -1))}
+	89.999%{transform:translateX(calc((var(--width)*9)* -1))}
+	90%{transform:translateX(0)}
+	99.999%{transform:translateX(0)}
+  }
+  .inner[num="2"]{
+	width: calc(var(--width)*10);
+	height: calc(var(--height)*10);
+	cursor:pointer;
+	display:block;
+	background: url(../img/rwom/1.png) 0 0, 
+	url(../img/rwom/2.png) var(--width) 0, 
+	url(../img/rwom/3.png) calc(var(--width)*2) 0, 
+	url(../img/rwom/4.png) calc(var(--width)*3) 0,
+	url(../img/rwom/5.png) calc(var(--width)*9) 0,
+	url(../img/rwom/6.png) calc(var(--width)*4) 0,
+	url(../img/rwom/7.png) calc(var(--width)*5) 0,
+	url(../img/rwom/8.png) calc(var(--width)*6) 0,
+	url(../img/rwom/9.png) calc(var(--width)*7) 0,
+	url(../img/rwom/10.png) calc(var(--width)*8) 0;
+	background-repeat: no-repeat;
+	background-size: var(--width) var(--height);
+  }

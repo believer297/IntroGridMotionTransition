@@ -1,0 +1,70 @@
+/*------------------------infinite element slider--------------------------*/
+.slider{
+    margin: 0.75rem auto;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+    display: flex;
+    justify-content: center;
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+	border: dashed 0.15em transparent;
+	filter: grayscale(1) brightness(0.618);
+    animation: autoRun var(--time) linear infinite;
+    transition: filter 1s ;
+    animation-delay: calc( (var(--time) / var(--quantity)) * (var(--position) - 1) )!important;
+}
+.slider .list .item >*{
+    width: 100%;
+    border-radius: 1em;
+	
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.list:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1) brightness(0.618);
+
+
+}
+.list .item:hover{
+    filter: grayscale(0) opacity(1) brightness(1);
+	border-radius: 1em;
+	border: dashed 0.15em var(--primary-color);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay var(--time) linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+hr{
+	border: solid 0.2rem var(--primary-color);
+	margin:0.6rem auto;
+	width: 100%;
+}
