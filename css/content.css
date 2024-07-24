@@ -6,10 +6,6 @@
 	font-family: "Work Sans", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	width: 100%;
 	background: url(../img/noise.png);
 
@@ -52,6 +48,7 @@
 	flex-direction: column;
 	align-items: center;
 	width: 37%;
+	text-wrap: balance;
 	font-family: 'Fugaz One', sans-serif;
 }
 .hero-content h2{
@@ -59,6 +56,7 @@
     font-weight: 600;
     margin: 0;
     padding: 0;
+	
 	line-height: calc(var(--size-5xl) / 1.2);
 	text-align: center;
 	letter-spacing: calc(var(--size-xxs) * -0.2);
@@ -92,7 +90,6 @@
 .grid{
 	margin-top: 1rem;
 	width: 100%;
-
 	gap: 0.6rem;
 	position: relative;
 	display: grid;
@@ -115,11 +112,11 @@
 	align-content: center;
 	
 }
-.grid2{
+.card{
 	max-width: 75ch;
 	min-width: 50ch;
 	width: 61ch;
-	height: max-content;
+	height: fit-content;
 	margin-top: 1rem;
 	font-size: var(--size-m);
 	line-height: calc(var(--size-m)*1.5);
@@ -132,7 +129,7 @@
 	border-radius: 0.5rem;
 
 }
-.grid2>:last-child{
+.card>:last-child{
 	align-content: center;
 	padding: 0.7rem;
 	margin: 0;

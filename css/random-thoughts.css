@@ -1,0 +1,67 @@
+.pages-grid{
+	display: grid;
+	margin: 1.6rem auto;
+	grid-template-rows:repeat(1,1fr);
+	grid-template-columns:repeat(2	,1fr);
+	padding: 1.618rem;
+    place-items:center ;
+}
+
+.page{
+	border: solid 0.2rem white;
+	color: white;
+   width: fit-content;
+    text-align: center;
+    text-wrap: balance;
+	grid-template-columns: 1fr;
+	margin: 1.618rem;
+	border-radius: 0.618rem;
+	display: grid;
+	align-items: center;
+	padding: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.page a {
+	font-weight: bolder;
+
+}
+.page p {
+    margin-top: 0;
+    line-height: 1.2rem;
+    max-width: 61ch;
+}
+/*images for pages with hover effect*/
+.strength{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 0.618)),
+    url('../img/High-Renaissance.webp') no-repeat center center;
+background-position: center;
+background-size: cover;
+
+}
+.strength:hover{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),
+    url('../img/High-Renaissance.webp') no-repeat center center;
+background-position: center;
+background-size: cover;
+
+}
+.love{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 0.618)),
+    url('../img/the_kiss.jpg') no-repeat center center;
+background-position: top;
+background-size: cover;
+
+}
+.love:hover{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),
+    url('../img/the_kiss.jpg') no-repeat center center;
+background-position: top;
+background-size: cover;
+}
+

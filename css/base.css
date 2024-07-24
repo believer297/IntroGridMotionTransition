@@ -4,33 +4,14 @@
 *::after,
 *::before {
 	box-sizing: border-box;
+	letter-spacing: 0.03rem;
 }
 html{
 	scroll-behavior: smooth;
-
-}
-
-.size-xxl{
-	font-size: calc(var( --size-xl) * 1.618);
-}
-.size-xl{
-	font-size: calc(var(--size-l) * 1.618);;
-}
-.size-l{
-	font-size: calc(var(--size-m) * 1.618);;
-}
-.size-m{
-	font-size: 1rem;
-}
-.size-s{
-	font-size:calc(var(--size-m) / 1.618);
-}
-.size-xs{
-	font-size:calc(var(--size-s) / 1.618);
 }
 
 body {
-
+	transition: background-color .4s;
 	margin: 0;
 	color: var(--tertiary-color);
 	background-color: var(--primary-color);
@@ -48,7 +29,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: var(--tertiary-color);
+	color: var(--secondary-color);
 	outline: none;
 	cursor: pointer;
 }
@@ -56,6 +37,7 @@ a {
 a:hover {
 	text-decoration: none;
 	outline: none;
+
 }
 
 /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
@@ -63,14 +45,9 @@ a:focus {
 	/* Provide a fallback style for browsers
 	 that don't support :focus-visible */
 	outline: none;
-	background: lightgrey;
+	filter: opacity(0.6);
 }
 
-a:focus:not(:focus-visible) {
-	/* Remove the focus indicator on mouse-focus for browsers
-	 that do support :focus-visible */
-	background: transparent;
-}
 
 a:focus-visible {
 	/* Draw a very noticeable focus style for
@@ -79,11 +56,6 @@ a:focus-visible {
 	outline: 2px solid red;
 	background: transparent;
 }
-
-
-
-
-
 
 /*--------------------------------------------------------------------*/
 #scroll-top{
@@ -101,6 +73,54 @@ a:focus-visible {
 	align-items: center;
 	justify-content: center;
 	z-index: 10000;
-	transition: filter 1.618s;
+	transition: filter 1.618s , visibility 1.618s;
 	visibility: hidden;
 }
+  
+  input[type=checkbox] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+  }
+  
+  label {
+	font-size: 1em;
+	cursor: pointer;
+	text-indent: -9999em;
+	width: 3.17em; 
+	height: 1.59em; 
+	background: var(--primary-color);
+	display: block;
+	border-radius: 1.59em; 
+	position: absolute;
+	top: 4%;
+	left: 3.2%;
+	z-index: 10;
+
+  }
+  
+  label:after {
+	content: '';
+	position: absolute;
+	top: 0.08em; 
+	left: 0.08em; 
+	width: 1.43em; 
+	height: 1.43em; 
+	background: var(--secondary-color);
+	border-radius: 1.43em; 
+	transition: 0.3s;
+  }
+  
+  input:checked + label {
+	background: var(--tertiary-color);
+  }
+  
+  input:checked + label:after {
+	left: calc(100% - 0.08em); 
+	transform: translateX(-100%);
+  }
+  
+  label:active:after {
+	width: 2.07em; 
+  }
+  

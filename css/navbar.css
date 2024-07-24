@@ -5,18 +5,28 @@ nav {
 	font-family: 'Work Sans',sans-serif;
 	font-size: var(--size-s);
 	position: fixed;
-
     left: 50%;
     transform: translate(-50%);
     border-radius: 0.6rem;
     display: flex;
-	width: calc(100% - var(--page-padding));
+	width: 97%;
     margin: 0 auto;
     padding: 0.01em 0.5em;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
     background-color: transparent;
+}
+nav a {
+	text-decoration: none;
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
+
+nav a:hover {
+	text-decoration: none;
+	outline: none;
 
 }
 
@@ -28,10 +38,10 @@ nav > * {
 	background-color: transparent;
     align-items: center;
     min-height: var(--min-height);
-
+    font-weight: 600;
     border-radius: 0.5em;
 	font-style: normal;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.06em;
 
 }
 
@@ -42,19 +52,20 @@ nav > * > * {
 }
 
 /* First and Last Navigation Items */
-nav > *:first-child {
+nav >:first-child {
     padding: 0.7em;
     height: var(--min-height);
-    width: calc(var(--min-height)*2.3);
+    width: calc(var(--min-height)*2);
     border-radius: 0.5em;
     overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+    place-content: center;
+    color: var(--secondary-color);
 	background-color: var(--secondary-color);
 }
 
-nav > *:last-child {
+
+nav >:last-child {
     background-color: var(--secondary-color);
 	padding: 0.1em 1.4em;
     height: var(--min-height);
@@ -68,7 +79,7 @@ nav > *:last-child:hover {
 
 /* Navigation List Items */
 .nav-list-i {
-    padding: 0.15em 0.2em;
+    padding: 0.15em 0.3em;
 	justify-content: space-evenly;
 	align-items: center;
     margin: 0 0.5em;
@@ -77,7 +88,7 @@ nav > *:last-child:hover {
 
 .nav-list-i > * {
     text-decoration: none;
-    margin: 0.29em 0.2em;
+    margin: 0.29em 0.35em;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -87,7 +98,8 @@ nav > *:last-child:hover {
     width: fit-content;
     height: fit-content;
     max-height: var(--min-height);
-    padding: 0.1em 1em;
+    padding: 1em 1.1em;
+
     border: var(--tertiary-color) 0.15em solid;
 }
 
