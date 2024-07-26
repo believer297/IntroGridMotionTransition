@@ -103,7 +103,7 @@ nav > *:last-child:hover {
     border: var(--tertiary-color) 0.15em solid;
 }
 
-.nav-list-i > *:hover {
+.nav-list-i > *:not(div[id="Toggle"]):hover {
     border: var(--primary-color) 0.15em solid;
     color: var(--primary-color);
 	background-color: var(--tertiary-color);

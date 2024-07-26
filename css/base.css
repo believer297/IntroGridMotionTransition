@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Work+Sans:ital,wght@1,500&display=swap');
 
+
+:root{
+	font-size: 20px;
+	--scale: 1.618;
+	--size-5xl:calc(var( --size-4xl) * var(--scale));
+	--size-4xl:calc(var( --size-3xl) * var(--scale));
+	--size-3xl:calc(var( --size-xxl) * var(--scale));
+	--size-xxl: calc(var( --size-xl) * var(--scale));
+	--size-xl: calc(var(--size-l) * var(--scale));
+	--size-l: calc(var(--size-m) * var(--scale));
+	--size-m: 1rem;
+	--size-s: calc(var(--size-m) / var(--scale));
+	--size-xs: calc(var(--size-s) / var(--scale));
+	--size-xxs: calc(var(--size-xs) / var(--scale));
+
+	/*--primary-color: #272a49;
+	--primary-color: #1f2023;*/
+	--mono-pri:#2e282a  ;
+	--secondary-color: #2140f6;
+	--secondary-color: #2e52e1;
+	--mono-sec: #1EA6FF;
+	/*--tertiary-color: #fff; 
+	--tertiary-color: #fefdff
+	--mono-ter: #E6E6E6;*/
+	--page-padding: 1.618rem;
+	--trans-content: -30vh;
+}
+
 *,
 *::after,
 *::before {
@@ -11,7 +39,7 @@ html{
 }
 
 body {
-	transition: background-color .4s;
+	transition: background-color 0s;
 	margin: 0;
 	color: var(--tertiary-color);
 	background-color: var(--primary-color);
@@ -59,24 +87,24 @@ a:focus-visible {
 
 /*--------------------------------------------------------------------*/
 #scroll-top{
-	background-color: var(--tertiary-color);
+	background-color: transparent;
 	position: fixed;
 	right: 0;
 	bottom: 0;
 	padding: 0;
 	width: 2.6em;
 	height: 2.6em;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	margin:1.6rem;
 	border-radius: 0.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 10000;
+	z-index: 1000;
 	transition: filter 1.618s , visibility 1.618s;
 	visibility: hidden;
 }
-  
+
   input[type=checkbox] {
 	height: 0;
 	width: 0;
@@ -92,10 +120,10 @@ a:focus-visible {
 	background: var(--primary-color);
 	display: block;
 	border-radius: 1.59em; 
-	position: absolute;
-	top: 4%;
+	position: relative;
+	/*top: 7%;
 	left: 3.2%;
-	z-index: 10;
+	z-index: 10;*/
 
   }
   
@@ -112,7 +140,7 @@ a:focus-visible {
   }
   
   input:checked + label {
-	background: var(--tertiary-color);
+	background: var(--primary-color);
   }
   
   input:checked + label:after {
@@ -123,4 +151,3 @@ a:focus-visible {
   label:active:after {
 	width: 2.07em; 
   }
-  

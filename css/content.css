@@ -25,18 +25,15 @@
 }
 */
 .hero-section {
-	background-image: url(../img/wom-street.webp);
-	background-size: cover;
-	background-position: center;
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	color: white;
+
 	font-family: "Fugaz One", sans-serif;
 	text-transform: uppercase;	
-	height:90vh ;
+	height:100vh ;
 	width: 100%;
-	margin-top: 0.7rem;
+
 	border-radius: 0.5em;
 	font-weight: 618; 
 
@@ -50,14 +47,21 @@
 	width: 37%;
 	text-wrap: balance;
 	font-family: 'Fugaz One', sans-serif;
+} 
+.hero-section svg{
+	fill: url(#linearGradient1);
+	width: 26rem;
+	height: 26rem;
 }
 .hero-content h2{
-	font-size: var(--size-5xl);
+	font-size: var(--size-3xl);
     font-weight: 600;
     margin: 0;
     padding: 0;
-	
-	line-height: calc(var(--size-5xl) / 1.2);
+	background: linear-gradient(to top, var(--secondary-color), var(--tertiary-color));
+	background-clip: text;
+	color: transparent;
+	line-height: calc(var(--size-3xl) / 1.2);
 	text-align: center;
 	letter-spacing: calc(var(--size-xxs) * -0.2);
 }

@@ -12,8 +12,7 @@ document.addEventListener('scroll', function() {
     }
 });
 
-/*
-*/
+/*---------dark mode-----------  */
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const root = document.documentElement;
@@ -53,5 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  
+
 
