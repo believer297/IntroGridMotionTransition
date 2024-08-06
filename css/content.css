@@ -7,7 +7,6 @@
 	font-weight: 400;
 	font-style: normal;
 	width: 100%;
-	background: url(../img/noise.png);
 
 }
 /*
@@ -31,7 +30,7 @@
 
 	font-family: "Fugaz One", sans-serif;
 	text-transform: uppercase;	
-	height:100vh ;
+	height:90vh ;
 	width: 100%;
 
 	border-radius: 0.5em;
@@ -66,75 +65,3 @@
 	letter-spacing: calc(var(--size-xxs) * -0.2);
 }
 
-.hero-content p {
-	margin: 0.4em;
-    padding: 0;
-	font-size: var(--size-m);
-	line-height: calc(var(--size-m)*1.4);
-	text-align: center;
-	font-weight: lighter;
-	font-family: 'Work Sans',sans-serif;
-	text-transform: none;
-	width: 61%;
-}
-.hero-content a {
-	margin-top: 1em;
-    padding: 0.6em 1.3em;
-    background: var(--secondary-color);
-    color: white;
-    border: none;
-	letter-spacing: 0.15em;
-	width: fit-content;
-    border-radius: 0.4em;
-    transition: background 0.3s ease;
-}
-.hero-content a:hover{
-	background: blue;
-}
-.grid{
-	margin-top: 1rem;
-	width: 100%;
-	gap: 0.6rem;
-	position: relative;
-	display: grid;
-	color : var(--tertiary-color);
-	text-align: center;
-	grid-template-columns: 1fr 0.39fr 1fr;
-	grid-template-rows: repeat(5,max-content);
-	font-size: var(--size-m);
-	height: max-content;
-}
-.grid >*{
-	border: var(--tertiary-color) 0.14rem solid;
-	border-radius: 0.3rem;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	line-height: 1.25rem;
-	letter-spacing: 0.06rem;
-	padding: 1rem;
-	align-content: center;
-	
-}
-.card{
-	max-width: 75ch;
-	min-width: 50ch;
-	width: 61ch;
-	height: fit-content;
-	margin-top: 1rem;
-	font-size: var(--size-m);
-	line-height: calc(var(--size-m)*1.5);
-	letter-spacing: calc(var(--size-m)*.04);
-	display: grid;
-	grid-template-columns:24% 76%;
-	position: relative;
-	border: 0;
-	border: var(--tertiary-color) 0.14rem solid;
-	border-radius: 0.5rem;
-
-}
-.card>:last-child{
-	align-content: center;
-	padding: 0.7rem;
-	margin: 0;
-}

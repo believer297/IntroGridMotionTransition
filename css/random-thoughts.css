@@ -8,7 +8,7 @@
 }
 
 .page{
-	border: solid 0.2rem white;
+	border: solid 0.1rem var(--tertiary-color);
 	color: white;
    width: fit-content;
     text-align: center;

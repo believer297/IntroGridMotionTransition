@@ -143,3 +143,8 @@ nav img {
     width: 100%;
     border-radius: 0.5em;
 }
+@media(width <=830px ){
+    nav{
+        background-color: red;
+}
+}

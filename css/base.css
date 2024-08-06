@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Work+Sans:ital,wght@1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+RO:wght@100..400&display=swap');
 
 :root{
 	font-size: 20px;
@@ -39,7 +39,7 @@ html{
 }
 
 body {
-	transition: background-color 0s;
+	transition: background-color 0.618s;
 	margin: 0;
 	color: var(--tertiary-color);
 	background-color: var(--primary-color);
@@ -47,7 +47,7 @@ body {
 	font-weight: 400;
 	font-optical-sizing: auto;
 	font-style: normal;
-
+	background-image: url(../img/noise.png);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -87,15 +87,15 @@ a:focus-visible {
 
 /*--------------------------------------------------------------------*/
 #scroll-top{
-	background-color: transparent;
+	background-color: var(--tertiary-color);
 	position: fixed;
 	right: 0;
 	bottom: 0;
 	padding: 0;
 	width: 2.6em;
 	height: 2.6em;
-	color: var(--secondary-color);
-	margin:1.6rem;
+	color: var(--primary-color);
+	margin:1.618rem;
 	border-radius: 0.5rem;
 	display: flex;
 	align-items: center;
